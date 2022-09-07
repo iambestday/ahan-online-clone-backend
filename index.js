@@ -4,9 +4,8 @@ const cors =require ("cors")
 const app = express ();
 const connection = require ("./db");
 
-app.get ("/",(res,req)=>{
-res.send("Back-END Run!");
-});
+//database connection
+connection();
 
 
 //middleware
@@ -18,5 +17,3 @@ app.use(require("./routes/Routes"));
 const port= process.env.PORT;
 app.listen(port,()=> console.log(`Listening on port ${port}`));
 
-//database connection
-connection();
