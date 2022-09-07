@@ -6,7 +6,7 @@ module.exports = async () => {
     useUnifiedTopology: true,
   };
   try {
-    const connection = await new   mongoose.connect(process.env.DB, connectionParams);
+    const connection = await new   mongoose.connect(process.env.MONGODB_URI, connectionParams);
     console.log(`Your DB is connected to url : ${connection.connection.host}`);
   } catch (error) {
     console.log(`Your DB could not connected : ${error}`);

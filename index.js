@@ -14,6 +14,5 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(require("./routes/Routes"));
 
-const port= process.env.PORT;
-app.listen(port,()=> console.log(`Listening on port ${port}`));
+
 
