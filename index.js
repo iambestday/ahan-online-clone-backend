@@ -16,7 +16,7 @@ app.use(require("./routes/Routes"));
 connection();
 
 app.get("/", (req, res) => {res.send("Deployed successfully");});
-app.get("/api/ok", (req, res) => {return res.status(200).send({ message: "ok", time: new Date() });});
+app.get("/api", (req, res) => {return res.status(200).send({ message: "API now UP =>", time: new Date() });});
 
 
 const port = process.env.PORT;
