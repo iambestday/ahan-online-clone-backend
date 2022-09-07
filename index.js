@@ -4,6 +4,9 @@ const cors =require ("cors")
 const app = express ();
 const connection = require ("./db");
 
+app.get ("/",(res,req)=>{
+res.send("Back-END Run!");
+});
 
 
 //middleware
